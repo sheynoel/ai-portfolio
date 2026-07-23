@@ -1,0 +1,40 @@
+<div class="modal fade" id="projectModal<%= index %>" tabindex="-1" aria-labelledby="projectModalTitle<%= index %>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header border-0 p-4 p-lg-5 pb-0">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="project-status badge rounded-pill"><%= project.status %></span>
+            <span class="small text-secondary"><%= project.year %></span>
+          </div>
+          <h2 id="projectModalTitle<%= index %>" class="h2 fw-semibold mb-1"><%= project.title %></h2>
+          <p class="text-secondary mb-0"><%= project.role %></p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-lg-5">
+        <% const gallery = project.gallery || [project.image]; %>
+        <div id="projectCarousel<%= index %>" class="carousel slide project-carousel mb-5">
+          <div class="carousel-inner rounded-4 overflow-hidden">
+            <% gallery.forEach((image, slideIndex) => { %>
+              <div class="carousel-item <%= slideIndex === 0 ? 'active' : '' %>">
+                <img class="d-block w-100" src="<%= image %>" alt="<%= project.title %> gallery image <%= slideIndex + 1 %>" onerror="this.onerror=null;this.src='/images/projects/project-placeholder.svg';">
+              </div>
+            <% }) %>
+          </div>
+          <% if (gallery.length > 1) { %>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel<%= index %>" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel<%= index %>" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button>
+          <% } %>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6"><h3 class="h5 fw-semibold">Project overview</h3><p class="text-secondary mb-0"><%= project.overview %></p></div>
+          <div class="col-lg-6"><h3 class="h5 fw-semibold">Technologies</h3><div class="d-flex flex-wrap gap-2"><% project.technologies.forEach((technology) => { %><span class="badge rounded-pill text-bg-light border"><%= technology %></span><% }) %></div></div>
+          <div class="col-lg-6"><h3 class="h5 fw-semibold">My contributions</h3><ul class="text-secondary ps-3 mb-0"><% project.contributions.forEach((contribution) => { %><li class="mb-2"><%= contribution %></li><% }) %></ul></div>
+          <div class="col-lg-6"><h3 class="h5 fw-semibold">Challenges</h3><p class="text-secondary mb-0"><%= project.challenges %></p></div>
+          <div class="col-12"><h3 class="h5 fw-semibold">Lessons learned</h3><p class="text-secondary mb-0"><%= project.lessons %></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

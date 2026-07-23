@@ -1,0 +1,152 @@
+<%- include('../layouts/main', { title, body: `
+  <section id="home" class="hero-section d-flex align-items-center overflow-hidden">
+    <div class="hero-orb hero-orb-one"></div>
+    <div class="hero-orb hero-orb-two"></div>
+    <div class="container position-relative py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9 text-center">
+          <p class="hero-eyebrow mb-3" data-reveal="up">Welcome to my portfolio</p>
+          <h1 class="display-2 fw-semibold lh-sm mb-4" data-reveal="up" style="--reveal-delay: 100ms;">
+            Hi, I\'m Shane Noel Pelayo
+          </h1>
+          <p class="fs-4 fw-medium mb-2" data-reveal="up" style="--reveal-delay: 180ms;">Fresh Cum Laude BSIT Graduate</p>
+          <p class="fs-5 text-secondary mb-4" data-reveal="up" style="--reveal-delay: 240ms;">Aspiring AI Software Engineer</p>
+          <p class="hero-copy mx-auto mb-5" data-reveal="up" style="--reveal-delay: 320ms;">
+            Passionate about AI-assisted software development, automation, REST APIs, and building practical software solutions.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-reveal="up" style="--reveal-delay: 400ms;">
+            <a class="btn btn-dark btn-lg rounded-pill px-4" href="/pdf/Pelayo_RESUME.pdf" download>Download Resume</a>
+            <a class="btn btn-outline-dark btn-lg rounded-pill px-4" href="#projects">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section py-5 py-lg-6">
+    <div class="container py-lg-5">
+      <div class="row justify-content-between align-items-end mb-5">
+        <div class="col-lg-7" data-reveal="left">
+          <p class="hero-eyebrow mb-2">About</p>
+          <h2 class="display-5 fw-semibold mb-0">Achievements that shaped my journey.</h2>
+        </div>
+        <div class="col-lg-4 mt-3 mt-lg-0" data-reveal="right">
+          <p class="text-secondary mb-0">A few milestones that reflect my commitment to learning, problem-solving, and building.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-reveal="scale">
+          <button class="achievement-card card h-100 w-100 text-start border-0" type="button" data-bs-toggle="modal" data-bs-target="#certificateModal" data-title="Cum Laude BSIT Graduate" data-date="Date: 2022-2026" data-description="Graduated Cum Laude with a Bachelor of Science in Information Technology, recognizing consistent academic excellence." data-image="/images/certificates/cumlaude.jpg">
+            <div class="card-body p-4 p-lg-5">
+              <div class="achievement-icon mb-4" aria-hidden="true">⌘</div>
+              <h3 class="h4 fw-semibold">Cum Laude BSIT Graduate</h3>
+              <p class="text-secondary mb-4">Academic distinction</p>
+              <span class="achievement-link">Click to view certificate <span aria-hidden="true">→</span></span>
+            </div>
+          </button>
+        </div>
+        <div class="col-md-6" data-reveal="scale" style="--reveal-delay: 80ms;">
+          <button class="achievement-card card h-100 w-100 text-start border-0" type="button" data-bs-toggle="modal" data-bs-target="#certificateModal" data-title="TOPCIT Level 2 Passer" data-date="Date: December 10, 2025" data-description="Passed TOPCIT Level 2, demonstrating practical information technology knowledge and problem-solving skills." data-image="/images/certificates/topcit.jpg">
+            <div class="card-body p-4 p-lg-5">
+              <div class="achievement-icon mb-4" aria-hidden="true">◈</div>
+              <h3 class="h4 fw-semibold">TOPCIT Level 2 Passer</h3>
+              <p class="text-secondary mb-4">IT competency certification</p>
+              <span class="achievement-link">Click to view certificate <span aria-hidden="true">→</span></span>
+            </div>
+          </button>
+        </div>
+        <div class="col-md-6" data-reveal="scale" style="--reveal-delay: 160ms;">
+          <button class="achievement-card card h-100 w-100 text-start border-0" type="button" data-bs-toggle="modal" data-bs-target="#certificateModal" data-title="IT Quiz Bee Champion" data-date="Date: February 2026" data-description="Earned the championship in an IT Quiz Bee through technical knowledge, speed, and teamwork." data-image="/images/certificates/quizbee.jpg">
+            <div class="card-body p-4 p-lg-5">
+              <div class="achievement-icon mb-4" aria-hidden="true">✦</div>
+              <h3 class="h4 fw-semibold">IT Quiz Bee Champion</h3>
+              <p class="text-secondary mb-4">Technical knowledge competition</p>
+              <span class="achievement-link">Click to view certificate <span aria-hidden="true">→</span></span>
+            </div>
+          </button>
+        </div>
+        <div class="col-md-6" data-reveal="scale" style="--reveal-delay: 240ms;">
+          <button class="achievement-card card h-100 w-100 text-start border-0" type="button" data-bs-toggle="modal" data-bs-target="#certificateModal" data-title="Hackathon Champion" data-date="Date: May 5, 2023" data-description="Led a winning hackathon project from idea to a practical working solution under time constraints." data-image="/images/certificates/hackathon.png">
+            <div class="card-body p-4 p-lg-5">
+              <div class="achievement-icon mb-4" aria-hidden="true">✺</div>
+              <h3 class="h4 fw-semibold">Hackathon Champion</h3>
+              <p class="text-secondary mb-4">Rapid product innovation</p>
+              <span class="achievement-link">Click to view certificate <span aria-hidden="true">→</span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section py-5 py-lg-6">
+    <div class="container py-lg-5">
+      <div class="row justify-content-between mb-5">
+        <div class="col-lg-7" data-reveal="left">
+          <p class="hero-eyebrow mb-2">Experience</p>
+          <h2 class="display-5 fw-semibold mb-0">Building practical software with modern tools.</h2>
+        </div>
+      </div>
+
+      <div class="experience-timeline">
+        <article class="timeline-item" data-reveal="right">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content card border-0 shadow-sm">
+            <div class="card-body p-4 p-lg-5">
+              <p class="hero-eyebrow mb-2">Professional experience</p>
+              <h3 class="h2 fw-semibold mb-1">Software Developer Intern</h3>
+              <p class="fs-5 text-secondary mb-4">Gencys Digital Trading Inc.</p>
+              <p class="text-secondary mb-4">
+                Contributed to web development initiatives, building practical features and collaborating through modern software delivery workflows.
+              </p>
+              <div class="d-flex flex-wrap gap-2" aria-label="Technologies and tools">
+                <span class="badge rounded-pill text-bg-light border px-3 py-2">Laravel</span>
+                <span class="badge rounded-pill text-bg-light border px-3 py-2">Vue</span>
+                <span class="badge rounded-pill text-bg-light border px-3 py-2">REST APIs</span>
+                <span class="badge rounded-pill text-bg-light border px-3 py-2">OpenAI Codex</span>
+                <span class="badge rounded-pill text-bg-light border px-3 py-2">GitHub</span>
+                <span class="badge rounded-pill text-bg-light border px-3 py-2">Jira</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+` + include('../partials/projects-section', { projects }) + include('../partials/contact-section') + `
+
+  <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg overflow-hidden">
+        <div class="modal-header border-0 px-4 px-lg-5 pt-4 pt-lg-5">
+          <div>
+            <p id="certificateDate" class="hero-eyebrow mb-1"></p>
+            <h2 id="certificateTitle" class="h3 fw-semibold mb-0"></h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-4 px-lg-5 pb-4 pb-lg-5">
+          <button id="certificateZoom" class="certificate-image-button d-block w-100 border-0 p-0 mb-4" type="button" aria-label="View certificate fullscreen">
+            <img id="certificateImage" class="certificate-preview img-fluid w-100 rounded-3" src="" alt="">
+          </button>
+          <p id="certificateDescription" class="text-secondary mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="certificateLightbox" tabindex="-1" aria-labelledby="certificateLightboxTitle" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-header border-0">
+          <h2 id="certificateLightboxTitle" class="visually-hidden">Certificate preview</h2>
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex align-items-center justify-content-center p-3 p-lg-5">
+          <img id="certificateLightboxImage" class="img-fluid rounded-3 shadow-lg" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+` }) %>

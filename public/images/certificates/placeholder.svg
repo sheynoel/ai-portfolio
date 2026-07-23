@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Certificate placeholder">
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  <rect x="42" y="42" width="1316" height="816" rx="12" fill="none" stroke="#6366f1" stroke-width="8"/>
+  <rect x="70" y="70" width="1260" height="760" rx="8" fill="none" stroke="#c7d2fe" stroke-width="2"/>
+  <circle cx="700" cy="263" r="70" fill="#e0e7ff"/><path d="M700 210l16 34 37 4-27 25 8 37-34-18-34 18 8-37-27-25 37-4z" fill="#4f46e5"/>
+  <text x="700" y="400" fill="#0f172a" font-family="Arial, sans-serif" font-size="46" font-weight="700" text-anchor="middle">CERTIFICATE OF ACHIEVEMENT</text>
+  <text x="700" y="476" fill="#475569" font-family="Arial, sans-serif" font-size="26" text-anchor="middle">Certificate preview</text>
+  <path d="M410 590h580M510 650h380" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="700" cy="735" r="42" fill="#e0e7ff"/>
+</svg>

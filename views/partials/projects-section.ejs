@@ -1,0 +1,22 @@
+<section id="projects" class="projects-section py-5 py-lg-6">
+  <div class="container py-lg-5">
+    <div class="row justify-content-between align-items-end mb-5">
+      <div class="col-lg-8" data-reveal="left">
+        <p class="hero-eyebrow mb-2">Selected work</p>
+        <h2 class="display-5 fw-semibold mb-0">Featured Engineering Projects</h2>
+      </div>
+      <div class="col-lg-4 mt-3 mt-lg-0" data-reveal="right">
+        <p class="text-secondary mb-0">Practical systems built across mobile, web, automation, and AI-assisted development.</p>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+      <% projects.forEach((project, index) => { %>
+        <div class="col" data-reveal="scale" style="--reveal-delay: <%= index * 70 %>ms;"><%- include('project-card', { project, index }) %></div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<% projects.forEach((project, index) => { %>
+  <%- include('project-modal', { project, index }) %>
+<% }) %>
