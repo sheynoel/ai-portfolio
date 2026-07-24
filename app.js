@@ -161,7 +161,8 @@ const skillCategories = [
       ['MySQL', 'Building data-backed inventory and library systems.'],
       ['PostgreSQL', 'Learning robust relational database development.'],
       ['Firebase Realtime Database', 'Synchronizing connected application events.'],
-      ['Firebase Firestore', 'Managing cloud-hosted application data.']
+      ['Firebase Firestore', 'Managing cloud-hosted application data.'],
+      ['Firebase Cloud Messaging (FCM)', 'Sending push notifications for connected applications.']
     ]
   },
   {
