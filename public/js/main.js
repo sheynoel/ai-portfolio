@@ -38,18 +38,25 @@ const certificateLightbox = document.querySelector('#certificateLightbox');
 const certificateImage = document.querySelector('#certificateImage');
 const lightboxImage = document.querySelector('#certificateLightboxImage');
 const certificateZoom = document.querySelector('#certificateZoom');
+const certificateUnavailable = document.querySelector('#certificateUnavailable');
 
 certificateModal?.addEventListener('show.bs.modal', (event) => {
   const card = event.relatedTarget;
-  const { title, date, description, image } = card.dataset;
+  const { title, date, description, image, certificateUnavailable: unavailable } = card.dataset;
+  const isUnavailable = unavailable === 'true';
 
   document.querySelector('#certificateTitle').textContent = title;
   document.querySelector('#certificateDate').textContent = date;
   document.querySelector('#certificateDescription').textContent = description;
-  certificateImage.src = image;
-  certificateImage.alt = `${title} certificate`;
-  lightboxImage.src = image;
-  lightboxImage.alt = `${title} certificate`;
+  certificateZoom.hidden = isUnavailable;
+  certificateUnavailable.hidden = !isUnavailable;
+
+  if (!isUnavailable) {
+    certificateImage.src = image;
+    certificateImage.alt = `${title} certificate`;
+    lightboxImage.src = image;
+    lightboxImage.alt = `${title} certificate`;
+  }
 });
 
 certificateZoom?.addEventListener('click', () => {

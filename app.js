@@ -101,13 +101,116 @@ const projects = [
   }
 ];
 
+const skillCategories = [
+  {
+    title: 'Artificial Intelligence',
+    icon: 'bi-stars',
+    skills: [
+      ['OpenAI Codex', 'AI-assisted software development and code iteration.'],
+      ['ChatGPT', 'Research, debugging, and development support.'],
+      ['Cursor', 'Using AI-powered tools to build and refine code.'],
+      ['Claude', 'Exploring AI-assisted analysis and problem-solving.'],
+      ['Prompt Engineering', 'Crafting focused prompts for coding and problem-solving.'],
+      ['AI-assisted Development', 'Using AI to accelerate thoughtful software delivery.']
+    ]
+  },
+  {
+    title: 'Programming Languages',
+    icon: 'bi-code-slash',
+    skills: [
+      ['JavaScript', 'Building interactive web and backend features.'],
+      ['PHP', 'Developing full-stack web applications.'],
+      ['Kotlin', 'Creating Android applications for connected systems.'],
+      ['Java', 'Applying object-oriented programming principles.'],
+      ['Python', 'Automating tasks and writing utility scripts.'],
+      ['C++', 'Strengthening programming fundamentals.'],
+      ['SQL', 'Writing database queries and designing data models.']
+    ]
+  },
+  {
+    title: 'Frameworks & Technologies',
+    icon: 'bi-boxes',
+    skills: [
+      ['Node.js', 'Powering server-side portfolio features.'],
+      ['Express.js', 'Structuring web routes and application logic.'],
+      ['Laravel', 'Building backend APIs and business workflows.'],
+      ['Vue.js', 'Developing responsive ERP interface modules.'],
+      ['Bootstrap 5', 'Creating responsive, accessible interfaces.'],
+      ['EJS', 'Building reusable server-rendered page views.'],
+      ['Firebase', 'Connecting apps to realtime cloud services.']
+    ]
+  },
+  {
+    title: 'Software Engineering',
+    icon: 'bi-diagram-3',
+    skills: [
+      ['Object-Oriented Programming (OOP)', 'Modeling maintainable application logic.'],
+      ['Data Structures & Algorithms', 'Choosing efficient approaches to technical problems.'],
+      ['REST API Development', 'Designing clear endpoints for connected applications.'],
+      ['Database Design', 'Modeling reliable relational data workflows.'],
+      ['Agile SDLC', 'Contributing through iterative team delivery.'],
+      ['Software Architecture', 'Organizing systems around clear responsibilities.'],
+      ['Problem Solving', 'Turning requirements into practical solutions.'],
+      ['Debugging', 'Tracing issues and improving application reliability.']
+    ]
+  },
+  {
+    title: 'Databases',
+    icon: 'bi-database',
+    skills: [
+      ['MySQL', 'Building data-backed inventory and library systems.'],
+      ['PostgreSQL', 'Learning robust relational database development.'],
+      ['Firebase Realtime Database', 'Synchronizing connected application events.'],
+      ['Firebase Firestore', 'Managing cloud-hosted application data.']
+    ]
+  },
+  {
+    title: 'Developer Tools',
+    icon: 'bi-tools',
+    skills: [
+      ['Git', 'Versioning code through collaborative workflows.'],
+      ['GitHub', 'Collaborating on repositories and code changes.'],
+      ['VS Code', 'Developing and debugging daily projects.'],
+      ['Jira', 'Tracking development work during internship projects.'],
+      ['Postman', 'Testing and validating REST API endpoints.'],
+      ['XAMPP', 'Running local PHP and MySQL development environments.'],
+      ['npm', 'Managing JavaScript packages and project scripts.'],
+      ['Vercel', 'Deploying modern web projects.']
+    ]
+  },
+  {
+    title: 'Operating Systems & Platforms',
+    icon: 'bi-pc-display',
+    skills: [
+      ['Linux Mint', 'Using a Linux environment for development.'],
+      ['Windows', 'Developing and supporting desktop applications.'],
+      ['Windows Server', 'Working with server administration fundamentals.'],
+      ['Microsoft Entra ID (Azure AD)', 'Learning identity and access administration.'],
+      ['Microsoft 365 Admin Center', 'Managing Microsoft 365 platform settings.']
+    ]
+  },
+  {
+    title: 'Currently Learning',
+    icon: 'bi-mortarboard',
+    learning: true,
+    skills: [
+      ['AI Engineering', 'Expanding practical AI systems expertise.'],
+      ['n8n Automation', 'Exploring workflow automation and integrations.'],
+      ['AI Agents', 'Learning autonomous task-oriented AI patterns.'],
+      ['Model Context Protocol (MCP)', 'Exploring AI tool and context integrations.'],
+      ['Advanced Node.js', 'Deepening backend application development skills.'],
+      ['Advanced REST APIs', 'Improving scalable API design practices.']
+    ]
+  }
+];
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.render('pages/index', { title: 'Shane Noel Pelayo | AI Software Engineer', projects });
+  res.render('pages/index', { title: 'Shane Noel Pelayo | AI Software Engineer', projects, skillCategories });
 });
 
 app.use((req, res) => {

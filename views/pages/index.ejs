@@ -57,12 +57,12 @@
           </button>
         </div>
         <div class="col-md-6" data-reveal="scale" style="--reveal-delay: 160ms;">
-          <button class="achievement-card card h-100 w-100 text-start border-0" type="button" data-bs-toggle="modal" data-bs-target="#certificateModal" data-title="IT Quiz Bee Champion" data-date="Date: February 2026" data-description="Earned the championship in an IT Quiz Bee through technical knowledge, speed, and teamwork." data-image="/images/certificates/quizbee.jpg">
+          <button class="achievement-card card h-100 w-100 text-start border-0" type="button" data-bs-toggle="modal" data-bs-target="#certificateModal" data-title="Duo IT Quiz Bee Champion" data-date="Date: February 2026" data-description="Won the Duo IT Quiz Bee through technical knowledge, quick thinking, and teamwork. No certificate was issued for this competition." data-certificate-unavailable="true">
             <div class="card-body p-4 p-lg-5">
               <div class="achievement-icon mb-4" aria-hidden="true">✦</div>
-              <h3 class="h4 fw-semibold">IT Quiz Bee Champion</h3>
-              <p class="text-secondary mb-4">Technical knowledge competition</p>
-              <span class="achievement-link">Click to view certificate <span aria-hidden="true">→</span></span>
+              <h3 class="h4 fw-semibold">Duo IT Quiz Bee Champion</h3>
+              <p class="text-secondary mb-4">Duo technical knowledge competition</p>
+              <span class="achievement-link">View achievement details <span aria-hidden="true">→</span></span>
             </div>
           </button>
         </div>
@@ -79,6 +79,8 @@
       </div>
     </div>
   </section>
+
+` + include('../partials/skills-section', { skillCategories }) + `
 
   <section id="experience" class="experience-section py-5 py-lg-6">
     <div class="container py-lg-5">
@@ -130,6 +132,11 @@
           <button id="certificateZoom" class="certificate-image-button d-block w-100 border-0 p-0 mb-4" type="button" aria-label="View certificate fullscreen">
             <img id="certificateImage" class="certificate-preview img-fluid w-100 rounded-3" src="" alt="">
           </button>
+          <div id="certificateUnavailable" class="certificate-unavailable mb-4" hidden>
+            <i class="bi bi-award" aria-hidden="true"></i>
+            <p class="fw-semibold mb-1">Certificate unavailable</p>
+            <p class="text-secondary small mb-0">A certificate was not issued for this achievement.</p>
+          </div>
           <p id="certificateDescription" class="text-secondary mb-0"></p>
         </div>
       </div>
